@@ -34,7 +34,16 @@ function closecart(){
     document.querySelector(".cart").onclick = function(){showcart()};
 }
 
-
+function open_nav(){
+    document.querySelector(".menu-left").classList.add("open-nav");
+    document.querySelector(".dark-panel-2").classList.add("show");
+    document.body.style="overflow-y: hidden;";
+}
+function close_nav(){
+    document.querySelector(".menu-left").classList.remove("open-nav");
+    document.querySelector(".dark-panel-2").classList.remove("show");
+    document.body.style="";
+}
 var mahsol = {
     aks:1,tedad:0
 };
@@ -74,4 +83,4 @@ else if(mahsol.tedad > 0){
     
 }
 }
-setInterval(check,100)
+setInterval(check,100);

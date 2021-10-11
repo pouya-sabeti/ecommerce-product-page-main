@@ -13,19 +13,21 @@
 <link rel="stylesheet" href="css/owl.carousel.min.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-bottom: 20px; }
     .attribution a { color: hsl(228, 45%, 44%);}
   </style>
 </head>
 <body>
-
+<div class="dark-panel-2" onclick="close_nav()"></div>
 <header>
   <div class="app">
     <nav>
       <div class="logo-left">
+        <button><img src="images/icon-menu.svg" alt="" onclick="open_nav()"></button>
        <img src="images/logo.svg" alt="">
       </div>
       <div class="menu-left">
+        <button onclick="close_nav()"><img src="images/icon-close.svg" alt=""></button>
         <ul>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -77,6 +79,13 @@
         <div class="image-big"> <img src="images/image-product-4.jpg" alt="" onclick="show()"> </div>
   
       </div>
+      <div class="owl-carousel owl_3">
+        <div class="image-big"> <img src="images/image-product-1.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-2.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-3.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-4.jpg" alt="" onclick="show()"> </div>
+  
+      </div>
     </div>
     </div>
   
@@ -86,9 +95,11 @@
       <p class="content"> These low-profile sneakers are your perfect casual wear companion. Featuring a 
         durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
         <h3 class="Price-now">$125.00</h3><span class="Discount">50%</span><p class="Price">$250.00</p>
+<div class="y">
         <button class="add" onclick="minuse()"><img src="images/icon-minus.svg" alt=""></button>
         <input type="number" id="number" value="0" disabled>
         <button class="remove" onclick='pluse()'><img src="images/icon-plus.svg" alt=""></button>
+      </div>
         <button class="submit" onclick="AddToCart()"><p>Add to cart</p></button>
     </div>
   </div>
@@ -152,7 +163,14 @@ $('.owl_2').owlCarousel({
     nav:true,
     dots:true,
     items:1
-})
+});
+$('.owl_3').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:false,
+    items:1
+});
 });
 
   </script>
