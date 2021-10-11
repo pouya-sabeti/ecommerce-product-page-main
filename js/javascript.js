@@ -25,6 +25,7 @@ function closee(){
 function showcart(){
    
     document.querySelector(".cart-box").classList.add("show");
+    document.querySelector(".none-panel").style="visibility: unset;";
     document.querySelector(".cart").onclick = function(){closecart()};
     
 }
@@ -32,6 +33,7 @@ function closecart(){
    
     document.querySelector(".cart-box").classList.remove("show");
     document.querySelector(".cart").onclick = function(){showcart()};
+    document.querySelector(".none-panel").style="";
 }
 
 function open_nav(){
@@ -55,8 +57,8 @@ function AddToCart(){
     var tedad_input = document.getElementById("number").value;
     if(tedad_input != 0){
     mahsol.tedad += Number(tedad_input);
-
-    document.getElementById("number").value = 0;
+te = 0;
+    document.getElementById("number").value = te;
     document.querySelector(".sms").classList.add("ani");
 function remove(){
     document.querySelector(".sms").classList.remove("ani");

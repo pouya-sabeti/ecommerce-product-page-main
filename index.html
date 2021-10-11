@@ -19,15 +19,20 @@
 </head>
 <body>
 <div class="dark-panel-2" onclick="close_nav()"></div>
+<div class="none-panel" onclick="closecart()"></div>
 <header>
   <div class="app">
     <nav>
       <div class="logo-left">
-        <button><img src="images/icon-menu.svg" alt="" onclick="open_nav()"></button>
+        <button><img src="images/icon-menu.svg" alt="" style="
+          width: 20px;
+      " onclick="open_nav()"></button>
        <img src="images/logo.svg" alt="">
       </div>
       <div class="menu-left">
-        <button onclick="close_nav()"><img src="images/icon-close.svg" alt=""></button>
+        <button onclick="close_nav()" ><img src="images/icon-close.svg" style="
+          width: 20px;
+      " alt=""></button>
         <ul>
           <li><a href="#">Collections</a></li>
           <li><a href="#">Men</a></li>
@@ -50,7 +55,7 @@
       <div id="boz-1" class="display-none">
       <div class="div_p">
       <img class="img-cart" src="images/image-product-1-thumbnail.jpg" alt="">
-      <div style="display: inline-block; height: 48px; margin-bottom: 30px; padding-left: 7px;">
+      <div class="po" >
       <p class="title-cart">Fall Limited Edition Sneakers</p>
       <p class="one-je">$125.00 x<span id="tedad-m"> 3</span></p > <h4 class="sun-je">$375.00</h4>
     </div>
