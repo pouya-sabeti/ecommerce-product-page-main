@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/media.css">
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%);}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app">
+    <nav>
+      <div class="logo-left">
+       <img src="images/logo.svg" alt="">
+      </div>
+      <div class="menu-left">
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="btn-right">
+        <div class="cart" onclick="showcart()"><img src="images/icon-cart.svg" alt="" >
+       <li class="show-tedad-top-cart"></li>
+        </div>
+        
+        <div class="image-profile"><div class="box-avatar"><img class="img-av" src="images/image-avatar.png" alt=""></div></div>
+      </div>
+    </nav>
+    <div class="cart-box">
+      <p class="cart-title">Cart</p>
+      <div class="hr"></div>
+      <div id="boz-1" class="display-none">
+      <div class="div_p">
+      <img class="img-cart" src="images/image-product-1-thumbnail.jpg" alt="">
+      <div style="display: inline-block; height: 48px; margin-bottom: 30px; padding-left: 7px;">
+      <p class="title-cart">Fall Limited Edition Sneakers</p>
+      <p class="one-je">$125.00 x<span id="tedad-m"> 3</span></p > <h4 class="sun-je">$375.00</h4>
+    </div>
+    <div><img class="delete-cart" src="images/icon-delete.svg" alt="" onclick="del()"></div>
+    </div>
+    <div style="width: 100%; padding: 0 20px 20px 20px;">
+    <button class="Checkout">Checkout</button>
+  </div>
+</div>
+<p class="cart-empty">your cart is empty.</p>
+
+    </div>
+  </div>
+  
+</header>
+
+<main>
+  <div class="app">
+    <div class="box">
+    <div class="images-left">
+      <div class="images-slider" >
+      <div class="owl-carousel owl_1">
+        <div class="image-big"> <img src="images/image-product-1.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-2.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-3.jpg" alt="" onclick="show()"> </div>
+        <div class="image-big"> <img src="images/image-product-4.jpg" alt="" onclick="show()"> </div>
+  
+      </div>
+    </div>
+    </div>
+  
+    <div class="title-right">
+      <p class="company"> Sneaker Company</p>
+      <h2 class="names">Fall Limited Edition Sneakers</h2>
+      <p class="content"> These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h3 class="Price-now">$125.00</h3><span class="Discount">50%</span><p class="Price">$250.00</p>
+        <button class="add" onclick="minuse()"><img src="images/icon-minus.svg" alt=""></button>
+        <input type="number" id="number" value="0" disabled>
+        <button class="remove" onclick='pluse()'><img src="images/icon-plus.svg" alt=""></button>
+        <button class="submit" onclick="AddToCart()"><p>Add to cart</p></button>
+    </div>
+  </div>
+  </div>
+</main>
+<div class="black-panel" onclick="closee()"></div>
+<div class="app">
+  <div class="images-box">
+    <div class="close"><button onclick="closee()"><img src="images/icon-close.svg" alt=""></button></div>
+    <div class="owl-carousel owl_2">
+      <div class="image-big"> <img src="images/image-product-1.jpg" alt=""> </div>
+      <div class="image-big"> <img src="images/image-product-2.jpg" alt=""> </div>
+      <div class="image-big"> <img src="images/image-product-3.jpg" alt=""> </div>
+      <div class="image-big"> <img src="images/image-product-4.jpg" alt=""> </div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="sms">Added to cart</div>
+
+
+
+  <!-- Collections
+  Men
+  Women
+  About
+  Contact
+
+  Sneaker Company
+
+  Fall Limited Edition Sneakers
+
+  These low-profile sneakers are your perfect casual wear companion. Featuring a 
+  durable rubber outer sole, they’ll withstand everything the weather can offer.
+
+  $125.00
+  50%
+  $250.00
+
+  0
+  Add to cart -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+    
+  <script src="js/javascript.js"></script>
+    
+  <script src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('.owl_1').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:true,
+    items:1
+});
+$('.owl_2').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    dots:true,
+    items:1
+})
+});
+
+  </script>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/pouya-sabeti">Pouya Sabeti Naieri</a>.
+  </div>
+</body>
+</html>
